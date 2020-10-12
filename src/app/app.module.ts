@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { GirlsComponent } from './girls/girls.component';
+import { GirlService } from './girl.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,10 @@ import { GirlsComponent } from './girls/girls.component';
     GirlsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GirlService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
