@@ -1,3 +1,15 @@
-<div *ngFor="let girl of girls">
-    <img [src]="girl.imgUrl" alt="">
+<div class="container">
+    <div class="row" >
+        <div class="col-4" *ngFor="let girl of girls">
+            <div class="card" style="width: 16rem; margin-top: 10px;">
+                <img class="card-img-top" [src]="girl.imgUrl" alt="Card image cap" width="300" height="300">
+                <div class="card-body">
+                  <h5 class="card-title">Name: {{ girl.name }}</h5>
+                  <p class="card-text">Age: {{girl.age}}</p>
+                  <p class="card-text">Age: {{girl.hometown}}</p>
+                  <a href="#" class="btn btn-primary">Date now</a>
+                </div>
+              </div>
+        </div>
+    </div>
 </div>
